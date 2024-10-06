@@ -2,6 +2,25 @@
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## How to create the project
+
+First, create the project
+```bash
+yarn create next-app investment-frontend
+# or
+yarn create next-app .
+```
+
+Go to created project folder
+```bash
+cd investment-frontend
+```
+
+Start the dev server
+```bash
+yarn dev
+```
+
 ## Getting Started
 
 First, run the development server:
