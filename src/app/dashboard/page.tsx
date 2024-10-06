@@ -3,12 +3,18 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
+interface Coin {
+    id: string;
+    name: string;
+    current_price: number;
+}
+
 export default function Dashboard() {
-    const [data, setData] = useState(null);
+    const [data, setData] = useState<Coin[] | null>(null);
 
     useEffect(() => {
         async function fetchData() {
-            const response = await axios.get('https://api.coingecko.com/api/v3/coins/markets', {
+            const response = await axios.get<Coin[]>('https://api.coingecko.com/api/v3/coins/markets', {
                 params: { vs_currency: 'usd' },
             });
             setData(response.data);
